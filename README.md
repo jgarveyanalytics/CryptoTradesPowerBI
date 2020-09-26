@@ -22,13 +22,14 @@ The program opens a websocket connection to the Binance Exchange and pushes trad
 
 #### Running the program / Accounts
 To run the program, users will need in addition to Visual Studio:
-* A Power BI account
-* A Binance Exchange Account
-* A Binance API
+* Power BI account
+* Binance Exchange Account
+* Binance API
+* Power BI Streaming Dataset & API Endpoint
 
 #### Endpoints
-1. Binance (Websocket API URL)
-1. Power BI (Streaming Dataset API URL)
+* Binance (Websocket API URL)
+* Power BI (Streaming Dataset API URL)
 
 #### Program External dependencies
 * Binance.Net ([Jkorf](https://github.com/JKorf), Nikkozp, CaptHolley)
@@ -37,3 +38,22 @@ To run the program, users will need in addition to Visual Studio:
 #### Environment Variables
 * BinanceAPIKey
 * BinanceAPISecret
+
+#### Power BI Streaming Dataset
+##### Type
+API
+
+##### Schema
+Field | Data Type
+----- | -----
+Symbol | Text
+Timestamp | DateTime
+Price | Number
+Quantity | Number
+PriceFormatted | Text
+AverageQuantity | Number
+CumulativeQuantity | Number
+TradeCount | Number
+
+##### Historic Data Analysis
+Disabled

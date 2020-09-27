@@ -7,10 +7,10 @@ namespace CryptoTradesPowerBI
         static void Main(string[] args)
         {
             // Import Binance & Power BI config
-            var binanceAPIKey = APIConfig.GetBinanceAPIKey();
+            var binanceAPIKey    = APIConfig.GetBinanceAPIKey();
             var binanceAPISecret = APIConfig.GetBinanceAPISecret();
-            var binanceSymbol = APIConfig.GetBinanceSymbol();
-            var powerBIAPIURL = APIConfig.GetPowerBIAPIURL();
+            var binanceSymbol    = APIConfig.GetBinanceSymbol();
+            var powerBIAPIURL    = APIConfig.GetPowerBIAPIURL();
 
             try
             {

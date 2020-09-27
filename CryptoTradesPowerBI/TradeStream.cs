@@ -28,8 +28,8 @@ namespace CryptoTradesPowerBI
             BinanceSocketClient.SetDefaultOptions(new BinanceSocketClientOptions()
             {
                 ApiCredentials = new ApiCredentials(binanceAPIKey, binanceAPISecret),
-                LogVerbosity = LogVerbosity.None, // Change to Debug if required
-                LogWriters = new List<TextWriter> { Console.Out },
+                LogVerbosity   = LogVerbosity.None, // Change to Debug if required
+                LogWriters     = new List<TextWriter> { Console.Out },
             });
 
             var socketClient = new BinanceSocketClient();
@@ -70,7 +70,7 @@ namespace CryptoTradesPowerBI
         // Ansyc post to Power BI method
         static async Task<HttpResponseMessage> PowerBIPostAsync(string pbiurl, string tradeEvent)
         {
-            HttpContent content = new StringContent(tradeEvent);
+            HttpContent         content  = new   StringContent(tradeEvent);
             HttpResponseMessage response = await httpClient.PostAsync(pbiurl, content);
             response.EnsureSuccessStatusCode();
             return response;
